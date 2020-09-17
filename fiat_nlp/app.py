@@ -1,8 +1,8 @@
 from flask import Flask, jsonify, request
 
-from .utils import Recommendation, parse_entities
-from .watson_nlu import process_text
-from .watson_stt import get_file_text
+from fiat_nlp.utils import Recommendation, parse_entities
+from fiat_nlp.watson_nlu import process_text
+from fiat_nlp.watson_stt import get_file_text
 
 
 app = Flask(__name__)

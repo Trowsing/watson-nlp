@@ -1,4 +1,4 @@
-from .cars import CARS
+from fiat_nlp.cars import CARS
 
 
 def parse_entities(data):
