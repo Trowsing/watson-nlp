@@ -1,0 +1,1 @@
+web: gunicorn --chdir fiat_nlp/ app:app

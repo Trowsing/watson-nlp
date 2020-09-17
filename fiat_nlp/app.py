@@ -4,6 +4,7 @@ from .utils import Recommendation, parse_entities
 from .watson_nlu import process_text
 from .watson_stt import get_file_text
 
+
 app = Flask(__name__)
 
 
@@ -30,3 +31,7 @@ def process_query():
     response = {"entities": entities}
     response["recommendation"] = recommendation.get()
     return jsonify(response)
+
+
+if __name__ == "__main__":
+    app.run(port=5000)
