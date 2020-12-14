@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "watson-nlp"
+version = "0.1.0"
+description = "Recommendation engine for cars, using Watson NLP."
+authors = ["Jhonathan Ballesteros <trowsing@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Flask = "^1.1.2"
+gunicorn = "^20.0.4"
+ibm-watson = "^5.0.0"
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.6.0"
+black = "^20.8b1"
+rope = "^0.18.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
