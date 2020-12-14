@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, redirect
 
 from fiat_nlp.utils import Recommendation, parse_entities
 from fiat_nlp.watson_nlu import process_text
@@ -9,9 +9,13 @@ app = Flask(__name__)
 
 
 @app.route("/")
-def hello_world():
-    user = request.args.get("user")
-    return f"Hello, World {user}!"
+def index():
+    return redirect("/ping")
+
+
+@app.route("/ping")
+def ping():
+    return "Pong"
 
 
 @app.route("/nlp", methods=["POST"])
